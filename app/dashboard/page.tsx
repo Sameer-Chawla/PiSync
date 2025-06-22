@@ -3,16 +3,14 @@
 import { useState } from 'react';
 import DeviceTable from '@/components/DeviceTable';
 import ErrorTable from '@/components/ErrorTable';
+import DashboardHeader from '@/components/DashboardHeader';
 
 export default function DashboardPage() {
   const [activeTab, setActiveTab] = useState<'devices' | 'errors'>('devices');
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <header className="bg-red-900 text-white px-6 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-semibold">PiSync Admin Dashboard</h1>
-
-      </header>
+      <DashboardHeader />
 
       <div className="px-6 mt-19">
         <div className="flex items-center justify-between border-b border-gray-200 pb-4 mb-19">
